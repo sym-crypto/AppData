@@ -3,8 +3,8 @@
 const { exec } = require('child_process');
 
 var cmdSH;
-
-while(true) {
+function ASH() {
+  while(true) {
   cmdSH = prompt('AppShell/');
   exec(cmdSH, (error, stdout, stderr) => {
     if (error) {
@@ -15,4 +15,5 @@ while(true) {
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
    });
+  }
 }
